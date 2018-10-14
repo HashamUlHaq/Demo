@@ -86,8 +86,14 @@ if __name__ == "__main__":
     print '\n=== Training Classifier ==='
     
     from sklearn.ensemble import RandomForestClassifier
+    from sklearn.utils import class_weight
+    class_weights = class_weight.compute_class_weight('balanced',
+                                                 np.unique(data['Class']),
+                                                 data['Class'])
+
     
-    model = RandomForestClassifier()
+    model = RandomForestClassifier(n_estimators=25, 
+                                   class_weight={0:class_weights[0],1:class_weights[1]})
     model.fit(x_train, y_train)  
         
     
