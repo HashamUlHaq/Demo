@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Website</title>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC:700);
+ 
+body{
+    text-align: center;    
+}
+h1{
+    font-family: Raleway, "Open Sans", sans-serif;
+    font-weight: normal;
+    color: #228B22;
+    font-size: 2.5em;
+}
+ 
+</style>
+ 
+</head>
+<body>
+
+  <h1>Using Credit Card Fraud Detection dataset from Kaggle.
+  </h1>
+  <h2>PROBLEM: Classify a transaction as genuine or fraudulent
+  </h2>
+  <h2>CHALLENGE: The data is skewed which raises a problem called 'imbalanced class problem'
+  </h2>
+  <h3>
+  Accuracy: {{accuracyValue}} (Although in imbalanced classes we do not use accuracy as the evaluation metric)   
+  </h3>
+  <h3>
+  Recall for true class (Fraud Class): {{recallValue}}
+  </h3>
+  <p>
+  Feature Importance: {{featureImportance}}
+  </p>
+</body>
+</html>
